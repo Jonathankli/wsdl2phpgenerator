@@ -22,7 +22,7 @@ class StreamContextFactory
     public function create(ConfigInterface $config)
     {
         $options = [];
-        $headers = [];
+        $headers = $config->get('headers');
 
         $proxy = $config->get('proxy');
         if (is_array($proxy)) {
